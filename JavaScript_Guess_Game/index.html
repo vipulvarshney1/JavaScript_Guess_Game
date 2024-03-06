@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body {
+            background-color: aquamarine;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10%;
+        }
+
+        #game_box {
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .startover {
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        input[type="number"] {
+            width: calc(100% - 16px);
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="game_box">
+            <h1>Try to guess a number between 1 and 100 and win the prize</h1>
+            <form action="">
+                <table>
+                    <tr>
+                        <td>Guess the number</td>
+                        <td><input type="number" id="userinput" placeholder="Enter your guess"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" id="submit" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="startover">
+            <p><span id="Remaining_guess">Remaining Guess: 10 </span></p>
+            <p><span id="previous_guess">Previous Guess: </span></p>
+            <p id="loworhigh">Low or High: </p>
+        </div>
+    </div>
+    <script src="text.js"></script>
+</body>
+</html>
